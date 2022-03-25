@@ -1,0 +1,8 @@
+.all_cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  background-color: rgb(222, 238, 252);
+}
