@@ -1,9 +1,9 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../redux/actions/productActions";
 import ProductComponent from "./ProductComponent";
-
+import classes from "./ProductListing.module.css";
 const ProductPage = () => {
   const products = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const ProductPage = () => {
 
   console.log("Products :", products);
   return (
-    <div className="ui grid container">
+    <div className={classes.all_cards}>
       <ProductComponent />
     </div>
   );

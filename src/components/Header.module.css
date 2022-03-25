@@ -1,0 +1,10 @@
+.navbar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid cornflowerblue;
+  position: sticky;
+}
+.nav_item {
+  margin-left: 100px;
+}

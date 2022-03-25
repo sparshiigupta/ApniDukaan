@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page_404 {
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.page_404 img {
+  height: 500px;
+  width: auto;
+  background-position: center;
+}
+.page_404 h2 {
+  font-size: 80px;
+  text-align: center;
+}
+
+.page_404 h3 {
+  font-size: 40px;
+  text-align: center;
+}
+.page_404 h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}

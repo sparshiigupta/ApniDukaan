@@ -6,6 +6,9 @@ import {
   selectedProduct,
   removeSelectedProduct,
 } from "../redux/actions/productActions";
+import Loading from "./Loading";
+import classes from "./ProductDetails.module.css";
+
 const ProductDetails = () => {
   const { productId } = useParams();
   let product = useSelector((state) => state.product);
@@ -26,33 +29,22 @@ const ProductDetails = () => {
       dispatch(removeSelectedProduct());
     };
   }, [productId]);
+
   return (
-    <div className="ui grid container">
+    <div className={classes.container}>
       {Object.keys(product).length === 0 ? (
-        <div>...Loading</div>
+        <Loading />
       ) : (
-        <div className="ui placeholder segment">
-          <div className="ui two column stackable center aligned grid">
-            <div className="ui vertical divider">AND</div>
-            <div className="middle aligned row">
-              <div className="column lp">
-                <img className="ui fluid image" src={image} />
-              </div>
-              <div className="column rp">
-                <h1>{title}</h1>
-                <h2>
-                  <p className="ui teal tag label">${price}</p>
-                </h2>
-                <h3 className="ui brown block header">{category}</h3>
-                <p>{description}</p>
-                <div className="ui vertical animated button" tabIndex="0">
-                  <div className="hidden content">
-                    <i className="shop icon"></i>
-                  </div>
-                  <div className="visible content">Add to Cart</div>
-                </div>
-              </div>
-            </div>
+        <div className={classes.product}>
+          <img className={classes.product_img} src={image} alt="item" />
+          <div className={classes.product_info}>
+            <h1 className={classes.title}>{title}</h1>
+            <h2 className={classes.price}>
+              <p>${price}</p>
+            </h2>
+            <h3 className={classes.category}>{category}</h3>
+            <p className={classes.product_description}>{description}</p>
+            <button className={classes.add_to_cart_button}>Add to Cart</button>
           </div>
         </div>
       )}

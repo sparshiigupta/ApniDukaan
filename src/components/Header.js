@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import classes from "./Header.module.css";
 const Header = () => {
   return (
-    <div className="ui fixed menu">
-      <div className="ui container center">
+    <div className={classes.navbar}>
+      <div className={classes.nav_item}>
         <Link to="/">
           <h2>ApniDukan</h2>
         </Link>
